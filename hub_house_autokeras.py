@@ -26,8 +26,8 @@ print(type(x_train))  # numpy.ndarray
 print(type(y_train))  # numpy.ndarray
 
 # 2) build and train models by using autokeras
-# It tries 10 different models.
-clf = ak.StructuredDataClassifier(overwrite=True, max_trials=10)
+# Try maximal 3 different models.
+clf = ak.StructuredDataClassifier(overwrite=True, max_trials=3)
 # Feed the structured data classifier with training data.
 clf.fit(x_train, y_train, 
         validation_split=0.15, 
