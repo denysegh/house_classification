@@ -48,5 +48,6 @@ except Exception:
 
 # 4) use the saved the model
 loaded_model = load_model("model_autokeras", custom_objects=ak.CUSTOM_OBJECTS)
+loaded_model.summary()
 #predicted_y = loaded_model.predict(tf.expand_dims(x_test, -1))
 #print(predicted_y)
